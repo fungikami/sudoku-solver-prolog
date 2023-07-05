@@ -41,7 +41,19 @@ read_board(Board) :-
     write('- Use a dot (.) for empty cells.'), nl,
     write('- Use a space between each number.'), nl,
     write('- Use a new line for each row.'), nl, nl,
-    write('Enter the board:'), nl,
+
+    write('Example:'), nl,
+    write('|: 2 9 5 7 4 3 8 6 1'), nl,
+    write('|: 4 3 1 8 6 5 9 . .'), nl,
+    write('|: 8 7 6 1 9 2 5 4 3'), nl,
+    write('|: 3 8 7 4 5 9 2 1 6'), nl,
+    write('|: 6 1 2 3 8 7 4 9 5'), nl,
+    write('|: 5 4 9 2 1 6 7 3 8'), nl,
+    write('|: 7 6 3 5 2 4 1 8 9'), nl,
+    write('|: 9 2 8 6 7 1 3 5 4'), nl,
+    write('|: 1 5 4 9 3 8 6 . .'), nl, nl,
+
+    write('Enter each row of the board:'), nl,
     length(Board, 9),
     maplist(read_row, Board),
     nl.
